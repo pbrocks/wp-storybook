@@ -1,7 +1,8 @@
 <p align="center"><img src="assets/logo.png"></p>
 
 <p align="center">
-<a href="https://wordpress.org/plugins/theme-support/"><img src="https://img.shields.io/github/license/lubusIN/wp-storybook.svg" alt="Licence"></a>
+<a href="https://wp-storybook.netlify.com/"><img src="https://github.com/storybooks/press/blob/master/badges/storybook.svg" alt="Storybook"></a>
+<a href="https://wp-storybook.netlify.com/"><img src="https://img.shields.io/github/license/lubusIN/wp-storybook.svg" alt="Licence"></a>
 <a href="https://github.com/lubusin/wp-storybook/blob/master/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs"></a>
 </p>
 
@@ -51,7 +52,7 @@ If you discover any security related issues, please email to [ajit@lubus.in](mai
 
 ## Credits
 
-[Ajit Bohra](http://https://twitter.com/ajitbohra)
+[Ajit Bohra](https://twitter.com/ajitbohra)
 
 ## Other Gutenberg Goodies
 <table width="100%">

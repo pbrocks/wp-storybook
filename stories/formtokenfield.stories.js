@@ -1,24 +1,14 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import { storiesOf, addDecorator } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { FormTokenField } from '@wordpress/components';
 import { withState } from '@wordpress/compose';
 import FormTokenFieldReadme from '@wordpress/components/src/form-token-field/README.md';
 
-/**
- * Stories
- */
 const FormTokenFieldBasic = withState( {
   tokens: [],
   suggestions: [ 'Africa', 'America', 'Antarctica', 'Asia', 'Europe', 'Oceania' ],

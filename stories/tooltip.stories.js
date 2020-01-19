@@ -1,23 +1,13 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import { storiesOf, addDecorator } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { Tooltip, Button } from '@wordpress/components';
 import TooltipReadme from '@wordpress/components/src/tooltip/README.md';
 
-/**
- * Stories
- */
 storiesOf('Components|Tooltip', module)
   .addDecorator(withReadme(TooltipReadme))
   .add('Basic', () => (
@@ -72,3 +62,4 @@ storiesOf('Components|Tooltip/Position', module)
       </Button>
     </Tooltip>
   ));
+

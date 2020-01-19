@@ -1,8 +1,8 @@
 <p align="center"><img src="assets/logo.png"></p>
 
 <p align="center">
-<a href="https://wp-storybook.netlify.com/"><img src="https://github.com/storybookjs/brand/blob/master/badge/badge-storybook.svg" alt="Storybook"></a>
-<a href="https://app.netlify.com/sites/wp-storybook/deploys"><img src="https://api.netlify.com/api/v1/badges/7f76156a-ca0a-4301-a139-f8540bf60318/deploy-status" alt="Netlify"></a> <a href="https://wp-storybook.netlify.com/"><img src="https://img.shields.io/github/license/lubusIN/wp-storybook.svg" alt="Licence"></a>
+<a href="https://wp-storybook.netlify.com/"><img src="https://github.com/storybooks/press/blob/master/badges/storybook.svg" alt="Storybook"></a>
+<a href="https://wp-storybook.netlify.com/"><img src="https://img.shields.io/github/license/lubusIN/wp-storybook.svg" alt="Licence"></a>
 <a href="https://github.com/lubusin/wp-storybook/blob/master/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs"></a>
 </p>
 
@@ -16,7 +16,11 @@
 
 Explore various WordPress react components to speed up your development. 
 
-![Storybook Demo](assets/demo.png)
+![Storybook Demo](assets/demo.gif)
+
+## Feedback / Suggestions
+
+If you have any suggestions/feature request that you would like to see in the upcoming releases , feel free to let us know in the [issues section](https://github.com/lubusIN/wp-storybook/issues)
 
 ## Usage
 
@@ -36,16 +40,11 @@ Explore various WordPress react components to speed up your development.
 ## Changelog
 
 Please see the [Changelog](CHANGELOG.md) 
-
-## Feedback / Suggestions
-
-If you have any suggestions/feature request that you would like to see in the upcoming releases, feel free to let us know in the [issues section](https://github.com/lubusIN/wp-storybook/issues)
-
 ## Contributing
 
-Thank you in advance if you wish to contribute to the `WP Storybook`. You can read the contribution guidelines [here](CONTRIBUTING.md)
+Thank you for considering contributing to the `WP Storybook`. You can read the contribution guide lines [here](CONTRIBUTING.md)
 
-Check the development tasklist [here](https://github.com/lubusIN/wp-storybook/projects/1), if something interests you or want to suggest something click [here](https://github.com/lubusIN/wp-storybook/issues)
+Check the development tasklist [here](https://github.com/lubusIN/wp-storybook/projects/1) if something interest you or suggest something [here](https://github.com/lubusIN/wp-storybook/issues)
 
 ## Security
 
@@ -101,4 +100,4 @@ You can pledge on [patreon](https://www.patreon.com/lubus) to support the develo
 
 ## License
 
-`WP Storybook` is an open-source software licensed under the [MIT](LICENSE)
+`WP Storybook` is open-sourced software licensed under the [MIT](LICENSE)

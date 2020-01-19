@@ -1,24 +1,14 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import { storiesOf, addDecorator } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { ColorPicker } from '@wordpress/components';
 import { withState } from '@wordpress/compose';
 import ColorPickerReadme from '@wordpress/components/src/color-picker/README.md';
 
-/**
- * Stories
- */
 const ColorPickerBasic = withState( {
   color: '#f00',
 } )( ( { color, setState } ) => {
@@ -46,3 +36,4 @@ storiesOf('Components|ColorPicker', module)
   .addDecorator(withReadme(ColorPickerReadme))
   .add('Basic', () => <ColorPickerBasic />)
   .add('DisableAlpha', () => <ColorPickerDisableAlpha />);
+

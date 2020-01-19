@@ -1,24 +1,13 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { PanelRow, Button} from '@wordpress/components';
 import PanelRowReadme from '@wordpress/components/src/panel/README.md';
 
-/**
- * Stories
- */
 storiesOf('Components|PanelRow', module)
   .addDecorator(withReadme(PanelRowReadme))
   .add('Basic', () => (
@@ -31,3 +20,4 @@ storiesOf('Components|PanelRow', module)
       <Button isPrimary isBusy onClick={action('clicked')}>Primary & Busy</Button>
     </PanelRow>
   ));
+

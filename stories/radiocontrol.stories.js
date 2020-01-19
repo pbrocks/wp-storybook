@@ -1,39 +1,29 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import { storiesOf, addDecorator } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { RadioControl } from '@wordpress/components';
 import { withState } from '@wordpress/compose';
 import RadioControlReadme from '@wordpress/components/src/radio-control/README.md';
 
-/**
- * Stories
- */
-const RadioControlBasic = withState({
+const RadioControlBasic = withState( {
     option: 'a',
-})(({ option, setState }) => (
+} )( ( { option, setState } ) => ( 
     <RadioControl
         label="User type"
         help="The type of the current user"
-        selected={option}
-        options={[
+        selected={ option }
+        options={ [
             { label: 'Author', value: 'a' },
             { label: 'Editor', value: 'e' },
-        ]}
-        onChange={(option) => { setState({ option }) }}
+        ] }
+        onChange={ ( option ) => { setState( { option } ) } }
     />
-));
+) );
 
 storiesOf('Components|RadioControl', module)
-    .addDecorator(withReadme(RadioControlReadme))
-    .add('Basic', () => <RadioControlBasic />);
+  .addDecorator(withReadme(RadioControlReadme))
+  .add('Basic', () => <RadioControlBasic />);

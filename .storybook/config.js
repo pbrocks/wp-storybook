@@ -1,49 +1,23 @@
-/**
- * External
- */
-import React from 'react';
-import GithubCorner from 'react-github-corner';
-
-/**
- * Storybook Core and Addons
- */
-import { addDecorator, addParameters, configure } from '@storybook/react';
-import centered from '@storybook/addon-centered/react';
-import { withViewport } from '@storybook/addon-viewport';
+import { addDecorator, configure } from '@storybook/react';
+import { withOptions } from '@storybook/addon-options';
 import { withConsole } from '@storybook/addon-console';
-import { withA11y } from '@storybook/addon-a11y';
+import centered from '@storybook/addon-centered';
+import { withViewport } from '@storybook/addon-viewport';
+import { checkA11y } from '@storybook/addon-a11y';
 
-/**
- * Community Addons
- */
-
-
-/**
- * WordPress Component Styles
- */
+import "./style.css";
 import "@wordpress/components/build-style/style.css";
 
-/**
- * Global Addon Config
- */
-addDecorator((storyFn, context) => withConsole()(storyFn)(context)); // Send console log to action logger
-addDecorator(centered); // Center align stories
-addParameters(withViewport()); // Device viewport
-addDecorator(withA11y); // Accessibility
+// Console
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+addDecorator(centered);
+addDecorator(withViewport());
+addDecorator(checkA11y);
 
-// Add Github repo link corner 
-addDecorator((storyFn) =>
-  <div>
-    {storyFn()}
-    <GithubCorner href="https://github.com/lubusIN/wp-storybook" />
-  </div>
-);
-
-/**
- * Storybook Config
- */
-addParameters({
-  options: {
+// Options
+// Option defaults:
+addDecorator(
+  withOptions({
     /**
      * name to display in the top left corner
      * @type {String}
@@ -54,27 +28,31 @@ addParameters({
      * @type {String}
      */
     url: 'https://github.com/WordPress/gutenberg/',
-
     /**
      * show story component as full screen
      * @type {Boolean}
      */
-    isFullscreen: false,
+    goFullScreen: false,
     /**
      * display panel that shows a list of stories
      * @type {Boolean}
      */
-    showNav: true,
+    showStoriesPanel: true,
     /**
      * display panel that shows addon configurations
      * @type {Boolean}
      */
-    showPanel: true,
+    showAddonPanel: true,
     /**
-     * where to show the addon panel
-     * @type {('bottom'|'right')}
+     * display floating search box to search through stories
+     * @type {Boolean}
      */
-    panelPosition: 'right',
+    showSearchBox: false,
+    /**
+     * show addon panel as a vertical panel on the right
+     * @type {Boolean}
+     */
+    addonPanelInRight: true,
     /**
      * sorts stories
      * @type {Boolean}
@@ -104,25 +82,20 @@ addParameters({
      */
     sidebarAnimations: true,
     /**
+     * id to select an addon panel
+     * @type {String}
+     */
+    selectedAddonPanel: undefined, // The order of addons in the "Addon panel" is the same as you import them in 'addons.js'. The first panel will be opened by default as you run Storybook
+    /**
      * enable/disable shortcuts
      * @type {Boolean}
      */
-    enableShortcuts: true,
-    /**
-     * show/hide tool bar
-     * @type {Boolean}
-     */
-    isToolshown: true,
-    /**
-     * theme storybook, see link below
-     */
-    theme: undefined,
-  },
-});
+    enableShortcuts: true, // true by default
+  })
+);
 
-/**
- * Automatically import all files ending in *.stories.js
- */
+
+// automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /.stories.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));

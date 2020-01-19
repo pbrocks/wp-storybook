@@ -1,31 +1,20 @@
-/**
- * External Dependencies
- */
 import React from 'react';
 
-/**
- * Storybook Dependencies
- */
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
+import { linkTo } from '@storybook/addon-links';
+import { withReadme, withDocs } from 'storybook-readme';
 
-/**
- * WordPress Dependencies
- */
 import { TabPanel } from '@wordpress/components';
 import TabPanelReadme from '@wordpress/components/src/tab-panel/README.md';
 
-/**
- * Stories
- */
 storiesOf('Components|TabPanel', module)
     .addDecorator(withReadme(TabPanelReadme))
     .add('Basic', () => (
         <TabPanel className="my-tab-panel"
             activeClass="active-tab"
-            onSelect={action('Selected')}
-            tabs={[
+            onSelect={ action( 'Selected' ) }
+            tabs={ [
                 {
                     name: 'tab1',
                     title: 'Tab 1',
@@ -36,18 +25,18 @@ storiesOf('Components|TabPanel', module)
                     title: 'Tab 2',
                     className: 'tab-two',
                 },
-            ]}>
+            ] }>
             {
-                (tab) => <p>{tab.title} content</p>
+                ( tab ) => <p>{ tab.title } content</p>
             }
         </TabPanel>
-    ))
-    .add('Orientation', () => (
-        <TabPanel className="my-tab-panel"
+        ))
+        .add('Orientation', () => (
+            <TabPanel className="my-tab-panel"
             activeClass="active-tab"
-            onSelect={action('Selected')}
+            onSelect={ action( 'Selected' ) }
             orientation="vertical"
-            tabs={[
+            tabs={ [
                 {
                     name: 'tab1',
                     title: 'Tab 1',
@@ -58,9 +47,10 @@ storiesOf('Components|TabPanel', module)
                     title: 'Tab 2',
                     className: 'tab-two',
                 },
-            ]}>
+            ] }>
             {
-                (tab) => <p>{tab.title}</p>
+                ( tab ) => <p>{ tab.title }</p>
             }
         </TabPanel>
     ));
+
